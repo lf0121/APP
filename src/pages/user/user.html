@@ -1,0 +1,71 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ page.title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <button ion-item no-lines class='item-margin' (tap)='goPerson()'>
+          <ion-avatar item-start>
+            <img [src]="page.uPic" alt="">
+          </ion-avatar>
+          <h2 class='userName' [ngClass]='{logined:page.logined}'>{{ page.userName }}</h2>
+          <span>{{ page.phoneNumber }}</span>
+        </button>
+
+        <ion-item-group class='item-margin' >
+          <button ion-item (tap)='goWallet()'>
+            <ion-icon name='logo-yen'></ion-icon>
+            <span margin-left>账户余额</span>
+            <span item-end>1314.00万元</span>
+          </button>
+
+          <button ion-item (tap)='goCar()'>
+            <ion-icon name='car'></ion-icon>
+            <span margin-left>车辆信息</span>
+          </button>
+
+          <button ion-item (tap)='goOrder()'>
+              <ion-icon name='cart'></ion-icon>
+              <span margin-left>我的订单</span>
+          </button>
+
+          <button ion-item>
+              <ion-icon name='send'></ion-icon>
+              <span margin-left>我的发布</span>
+          </button>
+        </ion-item-group>
+
+        <ion-item-group class='item-margin'>
+          <button ion-item (tap)='goOpinion()'>
+              <ion-icon name='mail-open'></ion-icon>
+              <span margin-left>体检反馈</span>
+          </button>
+
+          <button ion-item>
+              <ion-icon name='alert'></ion-icon>
+              <span margin-left>关于车友汇</span>
+          </button>
+
+          <button ion-item>
+              <ion-icon name='git-branch'></ion-icon>
+              <span margin-left>分享车友汇</span>
+          </button>
+
+          <button ion-item (tap)='goUpdate()'>
+              <ion-icon name='refresh-circle'></ion-icon>
+              <span margin-left>检测更新</span>
+          </button>
+
+          <button ion-item (tap)='goMoreset()'>
+              <ion-icon name='settings'></ion-icon>
+              <span margin-left>更多设置</span>
+          </button>
+        </ion-item-group>
+
+    </ion-list>
+</ion-content>

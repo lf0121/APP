@@ -1,0 +1,23 @@
+page-newsDetail {
+    ion-list {
+        .pink {
+            color: pink;
+        }
+    }
+    i{
+        color:#969696;
+    }
+    .tools {
+        text-align: center;
+        ion-icon{
+            &.active{
+                background: pink;
+            }
+            background: #969696;
+            color:white;
+            padding:5px;
+            line-height: 15px;
+            border-radius:100%;
+        }
+    }
+}

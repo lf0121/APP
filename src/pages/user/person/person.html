@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>{{ page.title }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-group class='item-margin'>
+      <ion-item>
+          <span>头像</span>
+          <ion-avatar item-end>
+            <img [src]="page.uPic" alt="">
+          </ion-avatar>
+      </ion-item>
+
+      <ion-item (tap)='editName()'>
+        <span>昵称</span>
+        <span item-end>{{ page.userName }}</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>性别</ion-label>
+        <ion-select [(ngModel)]='page.sex' cancelText="取消" okText="确定">
+          <ion-option selected=true value='0'>男</ion-option>
+          <ion-option value='1'>女</ion-option>
+          <ion-option value='2'>保密</ion-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>出生年月</ion-label>
+        <ion-datetime [(ngModel)]='page.birth' displayFormat='MM-DD-YYYY hh:mm:ss A' cancelText="取消" doneText='确定'></ion-datetime>
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group class='item-margin'>
+      <ion-item (tap)='changePhone()'>
+        <ion-label>手机号</ion-label>
+        <span item-end>{{ page.phoneNumber }}</span>
+      </ion-item>
+
+      <button ion-item (tap)='changePassword()'>
+          <ion-label>密码</ion-label>
+          <span item-end>修改密码</span>
+      </button>
+
+    </ion-item-group>
+    
+
+  </ion-list>
+  
+</ion-content>

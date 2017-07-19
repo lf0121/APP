@@ -38,8 +38,15 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  default1:   #ff88bb,
+  add:        #79A5E6,
+  pay:        #E4746B,
+  white:white,
+  gray:gray,
+  
 );
+
 
 
 // App iOS Variables
@@ -86,3 +93,15 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+$toolbar-ios-background:#ff88bb;    //苹果手机默认主题颜色 ios
+$toolbar-md-background:#ff88bb;   //安卓手机默认主题颜色 md
+
+// $toolbar-ios-title-font-size:30px;
+// $toolbar-md-title-font-size:30px;
+
+$tabs-ios-tab-color-active:#ff88bb;
+$tabs-md-tab-color-active:#ff88bb;
+
+$tabs-ios-tab-color-inactive:#bbbbbb;
+$tabs-md-tab-color-inactive:#bbbbbb;

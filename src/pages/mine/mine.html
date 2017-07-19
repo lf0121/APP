@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>我的</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <button ion-item no-lines (tap)='goPerson()'>
+          <ion-avatar item-start>
+            <img src="assets/images/pic1.jpg" alt="">
+          </ion-avatar>
+          <p class='pink'>喷摩斯的丶稻草人</p>
+          <span>177 2329 6846</span>
+      </button>
+
+      <ion-item-divider></ion-item-divider>
+
+      <ion-item-group>
+            <button ion-item no-lines (tap)='goWallet()'>
+              <ion-icon name='logo-yen' item-start></ion-icon>
+              <p item-start>账户余额</p>
+              <p float-right>1314万</p>
+          </button>
+          <button ion-item no-lines>
+              <ion-icon name='car' item-start></ion-icon>
+              <p item-start>车辆信息</p>
+          </button>
+          <button ion-item no-lines>
+              <ion-icon name='cart' item-start></ion-icon>
+              <p item-start>我的订单</p>
+          </button>
+          <button ion-item no-lines>
+              <ion-icon name='send' item-start></ion-icon>
+              <p item-start>我的发布</p>
+          </button>
+      </ion-item-group>
+       
+      <ion-item-divider></ion-item-divider>
+
+      <ion-item-group>
+           <button ion-item no-lines (tap)='goOpinion()'>
+              <ion-icon name='mail-open' item-start></ion-icon>
+              <p item-start>意见反馈</p>
+          </button>
+          <button ion-item no-lines>
+              <ion-icon name='alert' item-start></ion-icon>
+              <p item-start>关于车友汇</p>
+          </button>
+          <button ion-item no-lines>
+              <ion-icon name='git-branch' item-start></ion-icon>
+              <p item-start>分享车友汇</p>
+          </button>
+          <button ion-item no-lines>
+              <ion-icon name='refresh-circle' item-start></ion-icon>
+              <p item-start>检测更新</p>
+          </button>
+          <button ion-item no-lines (tap)='goMoreset()'>
+              <ion-icon name='construct' item-start></ion-icon>
+              <p item-start>更多设置</p>
+          </button>
+      </ion-item-group>
+      
+    </ion-list>
+</ion-content>

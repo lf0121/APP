@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+      <ion-segment color='light' [(ngModel)]="page.choose">
+          <ion-segment-button value="messages">消息</ion-segment-button>
+          <ion-segment-button value="friends">朋友</ion-segment-button>
+      </ion-segment>
+  </ion-navbar>
+</ion-header>
+
+<ion-content [ngSwitch]='page.choose'>
+  <ion-list *ngSwitchCase="'friends'">
+      <ion-item-group>
+        <ion-item>
+          <ion-icon class='people' item-start name='people'></ion-icon>
+          <span>通知</span>
+        </ion-item>
+        <ion-item *ngFor='let user of page.firendsList' (tap)='goFriend(user)'>
+          <ion-avatar item-start>
+            <img [src]="user.uPic" alt="">
+          </ion-avatar>
+          <h2>{{ user.name }}</h2>
+          <p>{{ user.content }}</p>
+          <div item-end>
+              <p>{{ user.lastTime }}</p>
+              <ion-badge float-right color='default1'>{{ user.cont }}</ion-badge>
+          </div>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+
+  <ion-list *ngSwitchCase="'messages'">
+      <ion-item-group>
+        <ion-item>
+          <ion-icon class='people' item-start name='notifications'></ion-icon>
+          <span>车友 群聊</span>
+        </ion-item>
+        <ion-item *ngFor='let user of page.messageList' (tap)='goChat(user)'>
+          <ion-avatar item-start>
+            <img [src]="user.uPic" alt="">
+          </ion-avatar>
+          <h2>{{ user.name }}</h2>
+          <p>{{ user.content }}</p>
+          <div item-end>
+              <p>{{ user.lastTime }}</p>
+              <ion-badge float-right color='default1'>{{ user.cont }}</ion-badge>
+          </div>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+</ion-content>
+    

@@ -1,0 +1,89 @@
+page-chat {
+    ion-content{
+        background: #f2f2f2 !important;
+        .classFace{
+            height:30px;
+            width:30px;
+        }
+    }
+    ion-item{
+        background: #f2f2f2 !important;
+    }
+    ion-footer{
+        transform: translateY(214px);
+        ion-slides{
+            height:214px;
+            background: #f2f2f2 !important;
+        }
+    }
+    .send{
+        position: absolute;
+        right:3px;
+        bottom:3px;
+        border-radius: 8px;
+        background: blueviolet;
+    }
+    .mic,
+    .face,
+    .add{
+        font-size: 25px;
+        padding: 5px;
+        margin: 0;
+        width:25px;
+        height:25px;
+        line-height: 0;
+        position: absolute;
+        bottom:8px;
+    }
+    .mic{
+        left:10px;
+    }
+    .face{
+        right:60px;
+    }
+    .add{
+        right:20px;
+    }
+    .editor{
+        img{
+            width:25px;
+            height:25px;
+        }
+        background: white;
+        padding: 8px 0;
+        overflow: scroll;
+        width:calc(100% - 140px);
+        position: relative;
+        left:45px;
+        max-height: 100px;
+        border-radius: 6px;
+        background: #f2f2f2;
+    }
+    .p,
+    .owner{
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 12px;
+        white-space: normal;
+        overflow: visible;
+        max-width:calc(100% - 50px);
+    }
+    .p{
+        background: pink;
+        color:white;
+        &:active{
+            background: #ccc;
+        }
+    }
+    .owner{
+        background: #33CCFF;
+        &:active{
+            background: #ccc;
+        }
+    }
+    .faceImg{
+        height:35.7px;
+        width:35.7px;
+    }
+    
+}

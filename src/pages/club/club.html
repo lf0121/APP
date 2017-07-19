@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        <ion-icon name='pin-outline'></ion-icon>
+        <span>重庆 江北</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item no-lines>
+        <button class='btn'>
+          <p class='btn1'>拼</p>
+          <p class='btn2'>拼车</p>
+        </button>
+        <button class='btn'>
+            <p class='btn1'>租</p>
+            <p class='btn2'>租车需求</p>
+        </button>
+        <button class='btn'>
+            <p class='btn1'>队</p>
+            <p class='btn2'>车队</p>
+        </button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-segment color='default1'>
+          <ion-segment-button class='choose'>
+              <span>离我最近</span>
+          </ion-segment-button>
+          <ion-segment-button class='choose'>
+              <span>评分最高</span>
+          </ion-segment-button>
+          <ion-segment-button class='choose'>
+              <span>改装店</span>
+          </ion-segment-button>
+        </ion-segment>
+  </ion-list>
+
+  <ion-list>
+      <ion-item *ngFor='let car of page'>
+          <img class='img' item-start col-3 [src]="car.img">
+          <div col-7>
+              <h1>{{ car.name }}</h1>
+              <p>
+                <ion-icon class='star' name='star'></ion-icon>
+                <ion-icon class='star' name='star'></ion-icon>
+                <ion-icon class='star' name='star'></ion-icon>
+                <ion-icon name='star'></ion-icon>
+                <ion-icon name='star'></ion-icon>
+              </p>
+              <p>{{ car.item }}</p>
+          </div>
+          <div class='Range' col-2 item-end>
+              <p class='range'>{{ car.range }}KM</p>
+              <p class='sale'>{{ car.sale }}</p>
+          </div>
+      </ion-item>
+  </ion-list>
+  
+</ion-content>

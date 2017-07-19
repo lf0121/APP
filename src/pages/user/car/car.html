@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>车辆信息</ion-title>
+      
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list [hidden]='page.hidden1'>
+    <ion-item no-lines>
+      <img src="assets/images/car_null.png" alt="">
+    </ion-item>
+    <div padding>
+      <button class='btn' ion-button block color='default1' (tap)='add()'>添加车辆</button>
+    </div>
+  </ion-list>
+
+
+
+  <ion-list [hidden]='page.hidden2'>
+    <ion-item>
+      <ion-label>品牌</ion-label>
+      <ion-select cancelText="取消" okText="确定">
+        <ion-option selected=true value='0'>宝马</ion-option>
+        <ion-option value='1'>奔驰</ion-option>
+        <ion-option value='2'>奥迪</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>车型</ion-label>
+      <ion-select cancelText="取消" okText="确定">
+        <ion-option selected=true value='0'>SUV</ion-option>
+        <ion-option value='1'>跑车</ion-option>
+        <ion-option value='2'>轿车</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>座位</ion-label>
+      <ion-select cancelText="取消" okText="确定">
+        <ion-option selected=true value='0'>5</ion-option>
+        <ion-option value='1'>7</ion-option>
+        <ion-option value='2'>8</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>颜色</ion-label>
+      <ion-select cancelText="取消" okText="确定">
+        <ion-option selected=true value='0'>黑色</ion-option>
+        <ion-option value='1'>黄色</ion-option>
+        <ion-option value='2'>银色</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>里程</ion-label>
+      <span item-end>1856KM</span>
+    </ion-item>
+  
+    <div padding>
+      <button class='btn' ion-button block color='default1'>确认添加</button>
+    </div>
+  </ion-list>
+  
+</ion-content>

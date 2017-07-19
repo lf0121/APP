@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>更多设置</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>新消息提醒</ion-label>
+      <ion-toggle color='default1' [(ngModel)]="page.alert"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>允许陌生人查看车辆信息</ion-label>
+      <ion-toggle color='default1' [(ngModel)]="page.message"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>非WIFI下加载视频</ion-label>
+      <ion-toggle color='default1' [(ngModel)]="page.video"></ion-toggle>
+    </ion-item>
+    <button ion-item (tap)='presentLoading()'>
+      <ion-label>清理缓存</ion-label>
+      <span item-end>{{ page.cache }}M</span>
+    </button>
+  </ion-list>
+  <div padding>
+    <button class='btn' ion-button block color='default1'>退出登录</button>
+  </div>
+</ion-content>

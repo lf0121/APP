@@ -1,3 +1,36 @@
 page-home {
-
+    ion-item-divider{
+        &.item-divider-ios,
+        .item-divider-md{
+            max-height:15px;
+            max-height:15px;
+        }
+    }
+    ion-slides {
+        height: 72px;
+        .swiper-pagination-bullet {
+            background: pink;
+        }
+    }
+    ion-list {
+        .pink {
+            color: pink;
+        }
+    }
+    i{
+        color:#969696;
+    }
+    .tools {
+        text-align: center;
+        ion-icon{
+            &.active{
+                background: pink;
+            }
+            background: #969696;
+            color:white;
+            padding:5px;
+            line-height: 15px;
+            border-radius:100%;
+        }
+    }
 }

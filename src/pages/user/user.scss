@@ -1,0 +1,22 @@
+page-user {
+    ion-content{
+        background: #f2f2f2 !important;
+    }
+    .item-margin{
+        margin-bottom: 15px;
+    }
+    ion-avatar{
+        height:60px;
+        width:60px;
+        img{
+            width:100% !important;
+            height:100% !important;
+        }
+    }
+    .userName{
+        font-size:16px;
+        &.logined{
+            color:pink;
+        }
+    }
+}

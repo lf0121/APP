@@ -1,0 +1,60 @@
+page-club {
+    ion-content{
+        background: #f2f2f2 !important;
+    }
+    ion-list{
+        margin-bottom: 15px !important;
+    }
+    ion-item{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .btn{
+        width:33.33%;
+        background: white;
+        &:active{
+            background: #ccc;
+        }
+        .btn1{
+            color:pink;
+            text-align: center;
+            line-height: 40px;
+            margin: 0 auto;
+            height: 40px;
+            width:40px;
+            border:2px solid pink !important;
+            border-radius: 100% ;
+        }
+        .btn2{
+            color:pink;
+            margin-top: 5px;
+        }
+    }
+    .choose{
+        span{
+            color: black;
+            font-size: 20px;
+        }
+    }
+    .img{
+        margin: 0 !important;
+    }
+    .Range{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .range{
+        font-size: 10px;
+        margin-bottom: 10px;
+        float: right;
+    }
+    .sale{
+        font-size: 8px;
+        border:1px solid pink;
+        border-radius: 5px;
+        float: right;
+    }
+    .star{
+        color:#FFA82C;
+    }
+}

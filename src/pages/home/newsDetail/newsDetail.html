@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>详情页</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+        <ion-item>
+            <ion-row>
+                <ion-avatar col-2>
+                    <img [src]="item.userPic" alt="">
+                </ion-avatar>
+                <div col-10>
+                    <h2>{{ item.userName }}</h2>
+                    <p>{{ item.createTime }} <span margin-left class='pink'>{{ item.carType }} {{ item.color }}</span></p>
+                </div>
+            </ion-row>
+
+            <div>
+                <div padding>
+                    <p>{{ item.news }}</p>
+                </div>
+                <ion-row *ngIf='item.photos'>
+                    <ion-col *ngFor='let src of item.photos'>
+                        <img [src]="src" alt="">
+                    </ion-col>
+                </ion-row>
+                <ion-row *ngIf='item.video'>
+                    <img [src]="item.video" alt="">
+                </ion-row>
+            </div>
+            
+            <div class='tools'>
+                <div float-left>
+                    <i>{{ item.good }}万赞</i>
+                    <i margin-left>{{ item.say }}评论</i>
+                </div>
+                <div float-right>
+                    <ion-icon [ngClass]='{active:!item.goodState}' (tap)='goodAdd()' margin-right name='thumbs-up'></ion-icon>
+                    <ion-icon margin-right name='text'></ion-icon>
+                    <ion-icon name='redo'></ion-icon>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item>
+            <img src="assets/images/pic.jpg" alt="">
+        </ion-item>
+    </ion-list>
+</ion-content>
+

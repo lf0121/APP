@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>{{ page.user.name }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content (tap)='close()' #content scrollDownOnLoad='true'>
+  <ion-list>
+      <ion-item-group>
+        <ion-item no-lines *ngFor='let mes of messageList'>
+            <ion-avatar item-start *ngIf=' mes.type=="other" '>
+                <img [src]="page.user.uPic">
+            </ion-avatar>
+            <p class='p' [innerHTML]='mes.content' *ngIf='mes.type=="other"'></p>
+            
+            <ion-avatar item-end *ngIf=' mes.type=="self" '>
+                <img [src]="mes.uPic">
+            </ion-avatar>
+            <p class='owner' [innerHTML]='mes.content' float-right *ngIf=' mes.type=="self" '>{{ mes.content }}</p>
+        </ion-item>
+        
+      </ion-item-group>
+  </ion-list>
+  
+</ion-content>
+
+
+<ion-footer #footer>
+  <ion-toolbar color='default1'>
+    <button class='mic' ion-button clear>
+      <ion-icon name='mic'></ion-icon>
+    </button>
+
+    <div (input)='inputText()' class='editor' #editor  contenteditable="true"></div>
+
+    <button class='face' (tap)='openFace()' ion-button clear>
+      <ion-icon name='happy-outline'></ion-icon>
+    </button>
+
+    <button class='add' ion-button clear>
+      <ion-icon name='add-circle-outline'></ion-icon>
+    </button>
+
+    <button [hidden]='page.sendState' (tap)='sendMessage()' class='send' ion-button small>发送</button>
+
+  </ion-toolbar>
+
+  <ion-slides pager>
+      <ion-slide *ngFor='let key of face'>
+          <ion-grid>
+              <ion-row *ngFor='let row of key'>
+                  <ion-col *ngFor='let src of row'>
+                    <img class='faceImg' [src]="src" (tap)='inputFace($event)'>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </ion-slide>
+  </ion-slides>
+</ion-footer>
